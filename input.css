@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  p {
+    @apply text-center uppercase text-darkGray text-xs md:text-left tracking-[.1rem];
+  }
+
+  h2 {
+    @apply text-center text-2xl font-medium md:text-left;
+  }
+
+  #search-icon {
+    @apply bg-black flex justify-center items-center w-14 rounded-r-xl hover:cursor-pointer;
+  }
+
+  h3 {
+    @apply text-white capitalize text-center font-medium text-2xl;
+  }
+
+  header {
+    @apply min-h-[30vh] md:min-h-[25vh] pt-5 md:pb-32 pb-44 px-10 bg-cover bg-no-repeat bg-pattern-bg;
+  }
+
+  #header-info {
+    @apply flex justify-center flex-col items-center space-y-5;
+  }
+}

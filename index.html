@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+      type="text/css
+      "
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+      crossorigin=""
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <section class="relative" id="header-info">
+        <h3>iP address tracker</h3>
+        <section class="flex flex-row justify-center items-center">
+          <input
+            type="text"
+            id="ip-value"
+            class="h-12 w-64 rounded-l-lg px-10 focus:outline-none hover:cursor-pointer"
+            placeholder="Search for any IP address or domain"
+          />
+          <button
+            id="search-icon"
+            class="flex justify-center items-center w-14 rounded-r-xl h-12"
+          >
+            <img src="../images/icon-arrow.svg" alt="" class="bg-no-repeat" />
+          </button>
+        </section>
+      </section>
+    </header>
+    <section
+      id="info"
+      class="absolute top-40 md:top-44 lg:top-52 left-[50%] -translate-x-[50%] w-3/4 mx-auto rounded-2xl bg-white p-5 flex flex-wrap justify-center space-y-5 max-w-6xl md:space-y-0 z-20"
+    >
+      <hgroup class="w-52">
+        <p>ip address</p>
+        <h2 id="ip-address">Fetching...</h2>
+      </hgroup>
+      <hgroup class="w-60">
+        <p>location</p>
+        <h2 id="location">Fetching...</h2>
+      </hgroup>
+      <hgroup class="w-48">
+        <p>timezone</p>
+        <h2 id="time-zone">Fetching...</h2>
+      </hgroup>
+      <hgroup class="w-48">
+        <p>isp</p>
+        <h2 id="isp">Fetching...</h2>
+      </hgroup>
+    </section>
+    <section id="map" class="min-h-[70vh] md:min-h-[75vh] z-0"></section>
+  </body>
+</html>
